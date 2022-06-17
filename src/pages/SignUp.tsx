@@ -8,7 +8,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { authService, dbService } from '../myFirebase';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEye,
+  faEyeSlash,
+  faRightFromBracket,
+} from '@fortawesome/free-solid-svg-icons';
 import NavBar from '@containers/NavBar';
 import GoToHomeBtn from '@components/GoToHomeBtn';
 import { Helmet } from 'react-helmet-async';
@@ -166,8 +170,9 @@ function SignUp() {
           <GreetingContainer>
             <h3>Hello, {userDisplayName}🥰</h3>
             <div>
-              <span>홈페이지에서 로그인해주세요</span>
-              <GoToHomeBtn />
+              <StyledBtn onClick={handleGoToHome}>
+                Go To Home <FontAwesomeIcon icon={faRightFromBracket} />
+              </StyledBtn>
             </div>
           </GreetingContainer>
         ) : (
@@ -234,7 +239,9 @@ function SignUp() {
               </InputContainer>
               <button type="submit">회원가입</button>
             </StyledForm>
-            <StyledBtn onClick={handleGoToHome}>Go to Home</StyledBtn>
+            <StyledBtn onClick={handleGoToHome}>
+              Go To Home <FontAwesomeIcon icon={faRightFromBracket} />
+            </StyledBtn>
             <span className="sign-up-warning">{signUpMessage}</span>
           </StyledFormContainer>
         )}
@@ -331,7 +338,7 @@ const InputWrapper = styled.div`
 `;
 
 const StyledBtn = styled.button`
-  width: 50%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 `;
