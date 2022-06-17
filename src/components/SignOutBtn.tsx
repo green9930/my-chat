@@ -9,7 +9,7 @@ const SignOutBtn = ({ shouldRedirect }: ShouldRedirectType): JSX.Element => {
 
   const handleSignOut = async () => {
     await signOut(authService);
-    navigate('/');
+    navigate('/my-chat');
   };
 
   return <StyledBtn onClick={() => handleSignOut()}>SIGN OUT</StyledBtn>;

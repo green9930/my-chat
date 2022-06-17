@@ -52,6 +52,7 @@ function AppRouter() {
     <Routes>
       <Route path="/signup" element={<SignUp />} />
       <Route path={'/'} element={loadingHome()} />
+      <Route path={'/my-chat'} element={loadingHome()} />
       <Route path={'/userprofile'} element={loadingProfile()} />
       <Route path="/unauthalert" element={<UnAuthAlert />} />
       <Route

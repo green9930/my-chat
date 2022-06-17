@@ -6,7 +6,7 @@ const GoToHomeBtn = () => {
   const navigate = useNavigate();
 
   const handleGoToHome = async () => {
-    navigate('/');
+    navigate('/my-chat');
   };
 
   return (

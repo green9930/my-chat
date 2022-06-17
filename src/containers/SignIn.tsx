@@ -14,7 +14,7 @@ function SignIn() {
   const handleSignIn = async () => {
     await signInWithEmailAndPassword(authService, userEmail, userPassword)
       .then(() => {
-        navigate('/');
+        navigate('/my-chat');
       })
       .catch((err) => {
         console.error(err);

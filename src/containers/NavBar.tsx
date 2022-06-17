@@ -26,7 +26,7 @@ function NavBar() {
   }, []);
 
   const handleGoToHome = async () => {
-    navigate('/');
+    navigate('/my-chat');
   };
 
   const handleGoToProfile = async () => {

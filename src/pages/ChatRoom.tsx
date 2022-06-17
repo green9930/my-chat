@@ -75,7 +75,7 @@ function ChatRoom() {
   }, []);
 
   const handleExit = () => {
-    navigate('/');
+    navigate('/my-chat');
   };
 
   const onSubmit = async (e: React.ChangeEvent<HTMLFormElement>) => {
