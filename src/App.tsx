@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import AppRouter from '@router/AppRouter';
+import { authService, dbService } from './myFirebase';
+import { doc, setDoc } from 'firebase/firestore';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  useEffect(() => {
+    const fetchUser = async () => {
+      authService.onAuthStateChanged(async (user: any) => {
+        const { displayName, email, uid, metadata } = user;
+        const userData = {
+          displayName: displayName,
+          email: email,
+          uid: uid,
+          timestamp: metadata.createdAt,
+        };
+        await setDoc(doc(dbService, 'users', user.uid), userData);
+      });
+    };
+    setTimeout(() => {
+      fetchUser();
+    }, 200);
+  }, []);
+
+  return <AppRouter />;
 }
 
 export default App;

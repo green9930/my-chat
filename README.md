@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+# My Chat  
+  
+   
+![TypeScript](https://img.shields.io/badge/TypeScript-4.7.2-blue) ![React](https://img.shields.io/badge/React-18.1.0-purple) ![React-router](https://img.shields.io/badge/React%20Router-6.3.0-green) ![Styled-Components](https://img.shields.io/badge/Styled%20Components-5.3.5-pink) ![Firebase](https://img.shields.io/badge/Firebase-9.8.1-orange)  
+  
+  
+## 기획 의도
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Firebase v9을 활용한 실시간 채팅 웹 페이지 제작
+- TypeScript와 React를 사용한 프로젝트 제작
+  
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+![My-Chat-Tech-Stack](./assets/My_Chat_TechStack.jpg)
 
-### `npm start`
+- Front-End
+  - TypeScript
+  - React
+  - React Router v6
+  - React Helmet
+- Back-End
+  - Firebase v9
+  
+    
+## Preview
+  
+![mychat-preview](./assets/mychat-preview.gif)
+  
+![mychat01](./assets/mychat01.jpg)  
+![mychat02](./assets/mychat02.jpg)  
+![mychat03](./assets/mychat03.jpg)  
+![mychat04](./assets/mychat04.jpg)  
+![mychat05](./assets/mychat05.jpg)  
+  
+  
+## 주요 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 회원 관리
+  - Firebase Auth를 활용한 이메일 기반 회원가입 및 로그인 사용자 관리
+- 친구 목록 조회 및 채팅
+  - 회원가입한 이용자 목록 조회 및 채팅방 생성 또는 (생성된 경우) 채팅방 참여 기능
+  
+  
